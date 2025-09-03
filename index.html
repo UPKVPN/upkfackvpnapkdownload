@@ -47,8 +47,8 @@ body {
     margin-bottom: 20px;
 }
 
-/* Download Button */
-.download-btn {
+/* Download Button & Messenger Button - shared styles */
+.download-btn, .messenger-btn {
     background-color: #28a745;
     color: #fff;
     border: none;
@@ -59,8 +59,8 @@ body {
     display: inline-block;
     text-decoration: none;
 }
-.download-btn:hover {
-    background-color: #534080;
+.download-btn:hover, .messenger-btn:hover {
+    background-color: #218838;
 }
 
 /* Footer Navigation */
@@ -90,6 +90,13 @@ body {
     color: #6750A4;
 }
 
+/* New CSS for VIP Text Section */
+.vip-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
 /* Utility classes to remove extra styles */
 .picture-cards, .picture-content, .blue, .dl_img, .click-count, .download, .img-container {
     display: none;
@@ -115,7 +122,7 @@ body {
 </nav>
 
 <div class="main-card">
-    <img src="https://raw.githubusercontent.com/UPKVPN/upkfackvpnapkdownload/refs/heads/main/UX.png" class="app-logo" alt="FNET VPN Icon">
+    <img src="https://raw.githubusercontent.com/UPKVPN/upkfackvpnapkdownload/refs/heads/main/UX.png" class="app-logo" alt="UPK FAST VPN PRO Icon">
     
     <h2>UPK FAST VPN PRO</h2>
     <p style="color:#555; font-size:14px; margin: 15px 0;">
@@ -125,6 +132,18 @@ body {
     <a href="https://github.com/UPKVPN/upkfackvpnapkdownload/releases/download/v1.0.1/UPK.FAST.VPN.PRO.2.apk" class="download-btn">
         <i class="fa fa-arrow-down"></i> Download
     </a>
+    
+    <div class="vip-section">
+        <p>
+            တစ်လ VIP (40) ဘတ်ဖြင့်အသုံးပြုနိုင်ပါသည်။
+            <br>
+            24 နာရီ ဝန်ဆောင်မှုပေးနေပါသည်။
+        </p>
+        <a href="https://m.me/your-messenger-page-link" class="messenger-btn">
+            <i class="fa fa-comment"></i> Messenger ကို ဆက်သွယ်ပါ
+        </a>
+    </div>
+
 </div>
 
 <nav class="nav">
@@ -141,4 +160,10 @@ body {
     <span class="nav__text">Install Apk</span>
   </a>
   <a href="#" class="nav__link">
-    <i class="material-icons nav__icon">notifications
+    <i class="material-icons nav__icon">notifications</i>
+    <span class="nav__text">Notification</span>
+  </a>
+</nav>
+
+</body>
+</html>
