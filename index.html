@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UPK FAST VPN PRO</title>
   <meta name="author" content="UPK FAST VPN PRO">
-  <meta name="keywords" content="HTML,CSS,JavaScript"">
-  <meta name ="revised" content ="02/11/2023" >
-  <meta http-equiv ="refresh" content ="35" >
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name ="revised" content ="02/11/2023">
+  <meta http-equiv ="refresh" content ="35">
   
   <meta name="description" content="The number one app for you">
     
@@ -16,6 +16,20 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+/* CSS for the new text block */
+.text-with-bg {
+    background-color: #f0f0f0;  /* Light gray background */
+    color: #333333;           /* Dark gray text color */
+    padding: 15px;            /* Padding inside the box */
+    border-radius: 8px;       /* Rounded corners */
+    margin-top: 20px;         /* Top margin for spacing */
+    text-align: center;       /* Center the text */
+    font-family: sans-serif;  /* Use a clean font */
+}
+</style>
+
 </head>
 
 <body>
@@ -322,13 +336,6 @@ initImagePopup(".img-container") // elem = image container
 <body>
 
 <div class="page-content">
-<!--     
-<h2>AJAX &amp; PHP Click-Counter with Flat File Storage (text file)</h2>
-<p>Log and display clicks on any HTML element. Counts are saved to a .txt file with PHP, while AJAX displays the increasing number in real time. No page refresh required!</p>
-<p>PHP5 required. Works in modern browsers and IE8+</p>
-<br/> -->
-
-
 <?php 
 
 $clickcount = explode("\n", file_get_contents('counter.txt'));
@@ -338,15 +345,6 @@ foreach($clickcount as $line){
 	}
 
 ?>
-
-<!-- 
-<button class="click-trigger" data-click-id="click-002">Click Me</button> 
-<span id="click-002" class="click-count"><?php echo $count['click-002'];?></span> 
-<br/><br/>
-
-<button class="click-trigger" data-click-id="click-003">Click Me</button> 
-<span id="click-003" class="click-count"><?php echo $count['click-003'];?></span> 
-<br/><br/>  -->
 
 <div class="picture-cards">
      <img src="https://raw.githubusercontent.com/UPKVPN/upkfackvpnapkdownload/refs/heads/main/FB_IMG_1752075728565.jpg" class="destination-pictures">
@@ -371,7 +369,13 @@ foreach($clickcount as $line){
   <a href="https://github.com/UPKVPN/upkfackvpnapkdownload/releases/download/v1.0.1/UPK.FAST.VPN.PRO.2.apk">
  <button class="click-trigger" data-click-id="click-002"><i class="fa fa-arrow-down"></i>  တိုက်ရိုက်လင့်</button></a>
  <br><br></center>
-      <div class="img-container">
+ 
+ <div class="text-with-bg">
+    <p>
+        ဒီအက်ပလီကေးရှင်းကို အသုံးပြုပြီး အင်တာနက်ကို လုံခြုံစိတ်ချစွာ အသုံးပြုနိုင်ပါပြီ။
+    </p>
+</div>
+ <div class="img-container">
      <ul class="horizontal-slide">       
     <img src="https://raw.githubusercontent.com/UPKVPN/upkfackvpnapkdownload/refs/heads/main/FB_IMG_1752075728565.jpg" class="object-fit-contain border rounded" style="width:45%" alt="...">
 <img src="vpnပုံထည့် 2 linkထည့်ပါ" class="object-fit-cover border rounded" style="width:45%" alt="...">
@@ -385,9 +389,7 @@ foreach($clickcount as $line){
    <br><br><br>
     <div class="chartop"></div>
      <br><br><br>
-</div><!-- closing ".page-content" -->
-
-</div>
+</div></div>
 <script>
 var clicks = document.querySelectorAll('.click-trigger'); // IE8
 for(var i = 0; i < clicks.length; i++){
@@ -405,7 +407,6 @@ for(var i = 0; i < clicks.length; i++){
 		}
 	}
 </script>
-<!-- partial:index.partial.html -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <nav class="nav">
   <a href="../404" class="nav__link">
@@ -426,6 +427,5 @@ for(var i = 0; i < clicks.length; i++){
     <span class="nav__text">Notification</span>
   </a>
 </nav>
-<!-- partial -->
 </body>
 </html>
