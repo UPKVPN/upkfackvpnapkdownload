@@ -33,11 +33,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-.video-container iframe {
+.video-container video {
     width: 100%;
     max-width: 500px;
     height: auto;
-    aspect-ratio: 9 / 16; /* For vertical video (Shorts) */
     border-radius: 10px;
 }
 
@@ -79,7 +78,10 @@ body {
 
 <div class="video-container">
     <h2>Install လုပ်ပုံအဆင့်ဆင့်</h2>
-    <iframe src="https://youtube.com/shorts/zOodKp3qqDo?si=dUR8B1zRVgQd3NYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <video controls autoplay>
+      <source src="https://youtube.com/shorts/zOodKp3qqDo?si=dUR8B1zRVgQd3NYc" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 </div>
 
 <nav class="nav">
@@ -91,7 +93,7 @@ body {
     <i class="material-icons nav__icon">image</i>
     <span class="nav__text">Image</span>
   </a>
-  <a href="install.html" class="nav__link nav__link--active">
+  <a href="#" class="nav__link nav__link--active">
     <i class="material-icons nav__icon">android</i>
     <span class="nav__text">Install Apk</span>
   </a>
