@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notifications</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+<style>
+/* Main Body and Background */
+body {
+    background: linear-gradient(to bottom, #28a745, #FFFFFF);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    padding-top: 56px;
+    padding-bottom: 65px; /* Space for the fixed footer nav */
+}
+.navbar {
+    background-color: #28a745;
+}
+
+/* Notification Container */
+.notification-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.notification-container h2 {
+    margin-bottom: 20px;
+}
+.notification-card {
+    background-color: #f8f9fa;
+    border-left: 5px solid #28a745;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.notification-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.notification-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+/* Footer Navigation */
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: auto;
+}
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    transition: background-color 0.1s ease-in-out;
+}
+.nav__link--active {
+    color: #6750A4;
+}
+</style>
+</head>
+
+<body>
+<nav class="navbar fixed-top bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">UPK FAST VPN PRO</a>
+  </div>
+</nav>
+
+<div class="notification-container">
+    <h2>အသိပေးချက်များ</h2>
+    
+    <div class="notification-card">
+        <h3>VPN Version အသစ်ထွက်ပါပြီ</h3>
+        <p>UPK FAST VPN PRO ၏ 2.5 version အသစ်ကို download လုပ်နိုင်ပါပြီ။</p>
+    </div>
+    
+    <div class="notification-card">
+        <h3>Server ပြန်လည်ပြင်ဆင်ပြီးပါပြီ</h3>
+        <p>A-TH Server ကို ပြန်လည်ပြင်ဆင်ပြီးပါပြီ။ အသုံးပြုနိုင်ပါပြီ။</p>
+    </div>
+
+    </div>
+
+<nav class="nav">
+  <a href="index.html" class="nav__link">
+    <i class="material-icons nav__icon">home</i>
+    <span class="nav__text">Home</span>
+  </a>
+  <a href="image.html" class="nav__link">
+    <i class="material-icons nav__icon">image</i>
+    <span class="nav__text">Image</span>
+  </a>
+  <a href="install.html" class="nav__link">
+    <i class="material-icons nav__icon">android</i>
+    <span class="nav__text">Install Apk</span>
+  </a>
+  <a href="notification.html" class="nav__link nav__link--active">
+    <i class="material-icons nav__icon">notifications</i>
+    <span class="nav__text">Notification</span>
+  </a>
+</nav>
+
+</body>
+</html>
