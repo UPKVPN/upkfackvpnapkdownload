@@ -3,52 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UPK FAST VPN PRO</title>
+  <title>FNET VPN</title>
   <meta name="author" content="UPK FAST VPN PRO">
-  <meta name="keywords" content="HTML,CSS,JavaScript">
-  <meta name="description" content="The number one app for you">
+  <meta name="keywords" content="FNET VPN, UPK FAST VPN, Myanmar VPN">
+  <meta name="description" content="Secure and fast VPN for everyone.">
   <meta name="revised" content="02/11/2023">
-  <meta http-equiv="refresh" content="35">
-    
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <style>
-/* CSS for the entire page background */
+/* Main Body and Background */
 body {
-    background: linear-gradient(
-        to bottom,
-        #EAE7FB,
-        #FFFFFF
-    );
+    background: linear-gradient(to bottom, #EAE7FB, #FFFFFF);
     min-height: 100vh;
     background-repeat: no-repeat;
     font-family: sans-serif;
+    padding-top: 56px; /* Space for the fixed navbar */
 }
 
-/* CSS for the main content card box */
+/* Navbar */
+.navbar {
+    background-color: #6750A4;
+}
+
+/* Main Content Card */
 .main-card {
     background-color: #FFFFFF;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 50px auto;
+    margin: 30px auto;
     max-width: 350px;
     text-align: center;
 }
 
-/* Existing styles - modified and kept below */
-.navbar {
-    background: linear-gradient(
-      to right,
-      #158cff,
-      #1172cfdc
-    );
-  }
+/* App Logo */
+.app-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
 
+/* Download Button */
+.download-btn {
+    background-color: #6750A4;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 40px;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+.download-btn:hover {
+    background-color: #534080;
+}
+
+/* Footer Navigation */
 .nav {
     position: fixed;
     bottom: 0;
@@ -59,7 +74,6 @@ body {
     display: flex;
     overflow-x: auto;
 }
-
 .nav__link {
     display: flex;
     flex-direction: column;
@@ -67,215 +81,64 @@ body {
     justify-content: center;
     flex-grow: 1;
     min-width: 50px;
-    overflow: hidden;
-    white-space: nowrap;
     font-size: 13px;
     color: #444444;
     text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
     transition: background-color 0.1s ease-in-out;
 }
-
-.nav__link:hover {
-    background-color: #00000000;
-    color: #12976f;
-}
-
 .nav__link--active {
-    color: #12976f;
+    color: #6750A4;
 }
 
-.nav__icon {
-    font-size: 18px;
+/* Utility classes to remove extra styles */
+.picture-cards, .picture-content, .blue, .dl_img, .click-count, .download, .img-container {
+    display: none;
 }
-
-.page-content {
-    padding: 1em;
-    max-width: 64em;
-    margin: auto;
-}
-
-.click-count { 
-    color: #757575; 
-    font-size: 12px;
-}
-
-.blue {
-    color:#12976f;
-    font-size: 13px;
-}
-button {
-    margin-Top: 15px;
-    background-color: #12976f;
-    border: none;
-    border-radius: 30px;
-    color: white;
-    padding: 5px 50px;
-    font-size: none;
-}
-button:hover {
-    margin-Top: 15px;
-    background-color: #0b855f;
-    border: none;
-    border-radius: 30px;
-    color: white;
-    padding: 5px 50px;
-    font-size: none;
-}
-
-.download-link {
-    font-size: 12px;
-}
-
-.picture-cards {
-    display: flex;
-    padding: 1rem;
-    margin-Top: 0px;
-}
-
-.destination-pictures {
-    width: 100px;
-    height: 100px;
-    border-radius: 5%;
-    margin-Top: 0px;
-}
-
-.picture-content {
-    padding: 0 1rem;
-    margin-Top: 13px;
-}
-  
-.dl_img {
-    width: 18px;
-    height: 18px;
-}
-  
-.chartop {
-    margin-Top: 50px;
-}
-
-ul.horizontal-slide {
-    margin: 0px;
-    padding: 10px;
-    width: 100%;
-    white-space: nowrap;
-    overflow-x: auto;
-}
-
-.img-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.img-container img {
-    cursor: pointer;
-    border-radius: 6px;
-    width: 50%;
-}
-
-.popupContainer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    overflow: auto;
-}
-.popupContainer .popUpBackground {
-    transition: all 0.3s ease-in-out;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    top: 0;
-}
-.popupContainer .popUpBackground.active {
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.popupContainer .popImage {
-    position: relative;
-    display: block;
-    transition: all 0.3s ease-in-out;
-    border-radius: 1px;
-}
-     
 </style>
-
-<script>
-    function initImagePopup(elem){
-    document.addEventListener('click', function (e) {
-        if (!e.target.matches(elem +' img')) return;
-        else{
-            var image = e.target;
-            var popupImage = document.createElement("img"); 
-            popupImage.setAttribute('src', image.src);
-            popupImage.style.width = image.width+"px";
-            popupImage.style.height = image.height+"px";
-            popupImage.style.left = image.offsetLeft+"px";
-            popupImage.style.top = image.offsetTop+"px";
-            popupImage.classList.add('popImage');
-            var popupContainer = document.createElement("div"); 
-            popupContainer.classList.add('popupContainer');
-            var popUpBackground = document.createElement("div"); 
-            popUpBackground.classList.add('popUpBackground');
-            popupContainer.appendChild(popUpBackground);
-            popupContainer.appendChild(popupImage);
-            document.body.appendChild(popupContainer);
-            popupImageFunction();
-
-            var wait;
-            window.onresize = function(){
-                clearTimeout(wait);
-                wait = setTimeout(popupImageFunction, 100);
-            };
-
-            popupImage.addEventListener('click', function (e) {
-                closePopUpImage();
-            });
-            popUpBackground.addEventListener('click', function (e) {
-                closePopUpImage();
-            });
-
-            function popupImageFunction(){
-                setTimeout(function(){      
-                    popUpBackground.classList.add('active');
-                    popupImage.style.left = "15%";
-                    popupImage.style.top = "50px";       
-                    popupImage.style.width = window.innerWidth * 0.7+"px";
-                    popupImage.style.height = ((image.height / image.width) * (window.innerWidth * 0.7))+"px";       
-                }, 10);
-            }
-
-            function closePopUpImage(){
-                popupImage.style.width = image.width+"px";
-                popupImage.style.height = image.height+"px";
-                popupImage.style.left = image.offsetLeft+"px";
-                popupImage.style.top = image.offsetTop+"px";
-                popUpBackground.classList.remove('active');
-                setTimeout(function(){      
-                    popupContainer.remove();
-                }, 300);
-            }
-        }
-    });
-}
-
-initImagePopup(".img-container")
-</script>
 </head>
 
 <body>
-<nav class="navbar fixed-top bg-?? placeholder-wave" style="background-color: #6750A4;" data-bs-theme="dark">
+<nav class="navbar fixed-top bg-dark" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">UPK FAST VPN PRO</a>
+    <a class="navbar-brand" href="#">FNET VPN</a>
     <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </div>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../app">Version
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-card">
+    <img src="https://raw.githubusercontent.com/UPKVPN/upkfackvpnapkdownload/main/FNET_VPN_Icon.jpg" class="app-logo" alt="FNET VPN Icon">
+    
+    <h2>FNET VPN</h2>
+    <p style="color:#555; font-size:14px; margin: 15px 0;">
+        ထိုင်းရောက်မြန်မာများအတွက် အင်တာနက်ကို လုံခြုံမြန်ဆန်စွာ အသုံးပြုနိုင်ရန် FNET VPN application ကို ဒေါင်းလုတ်ဆွဲပါ။
+    </p>
+
+    <a href="https://github.com/UPKVPN/upkfackvpnapkdownload/releases/download/v1.0.1/UPK.FAST.VPN.PRO.2.apk" class="download-btn">
+        <i class="fa fa-arrow-down"></i> Download FNET VPN
+    </a>
+</div>
+
+<nav class="nav">
+  <a href="#" class="nav__link nav__link--active">
+    <i class="material-icons nav__icon">home</i>
+    <span class="nav__text">Home</span>
+  </a>
+  <a href="#" class="nav__link">
+    <i class="material-icons nav__icon">image</i>
+    <span class="nav__text">Image</span>
+  </a>
+  <a href="#" class="nav__link">
+    <i class="material-icons nav__icon">android</i>
+    <span class="nav__text">Install Apk</span>
+  </a>
+  <a href="#" class="nav__link">
+    <i class="material-icons nav__icon">notifications
