@@ -59,6 +59,15 @@ body {
     display: inline-block;
     text-decoration: none;
 }
+/* Animation to make the button pulse/throb */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); } /* Slightly enlarge the button */
+    100% { transform: scale(1); }
+}
+.download-btn {
+    animation: pulse 1.5s infinite ease-in-out;
+}
 
 
 /* Footer Navigation */
@@ -88,9 +97,16 @@ body {
     color: #6750A4;
 }
 
+/* New CSS for VIP Text Section */
+.vip-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
 /* Container for the running text */
 .running-text-container {
-margin: 20px auto;
+
     height: 25px; /* Text အတွက် နေရာလွတ် */
     overflow: hidden; /* container အပြင်ဘက် ရောက်နေတဲ့ စာလုံးတွေကို ဖျောက်ထားတာ */
     position: relative;
@@ -148,10 +164,19 @@ margin: 20px auto;
     font-size: 24px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: pulse-fab 1.5s infinite ease-in-out;
 }
 
 .fab-btn-main:hover {
     background-color: #0056b3;
+    animation-play-state: paused;
+}
+
+/* Keyframes for the FAB animation */
+@keyframes pulse-fab {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
 
 /* FAB Sub-buttons */
@@ -212,18 +237,23 @@ margin: 20px auto;
     position: absolute;
     right: 70px;
     bottom: 5px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-    transform: translateX(10px);
     white-space: nowrap;
-}
-
-/* Show the text when FAB is active */
-.fab-container.active .fab-text {
+    animation: pulse-text 1.5s infinite ease-in-out;
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
+}
+
+/* Link for the FAB Text */
+.fab-text-link {
+  text-decoration: none;
+}
+
+/* Keyframes for the text animation */
+@keyframes pulse-text {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 /* FAB Sub-button Text */
@@ -294,9 +324,11 @@ margin: 20px auto;
         </a>
     </div>
     <div class="fab-main">
-        <span class="fab-text">Live Chat</span>
+        <a href="https://m.me/upkvpnfastvpn" class="fab-text-link">
+          <p class="fab-text">VIP ဝယ်ယူရန်</p>
+        </a>
         <button id="fab-toggle" class="fab-btn-main">
-            <i class="fa fa-plus"></i>
+            <i class="fa fa-comment"></i>
         </button>
     </div>
 </div>
