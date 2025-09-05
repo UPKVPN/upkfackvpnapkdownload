@@ -88,11 +88,40 @@ body {
     color: #6750A4;
 }
 
-/* New CSS for VIP Text Section */
-.vip-section {
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+/* Container for the running text */
+.running-text-container {
+margin: 20px auto;
+    height: 25px; /* Text အတွက် နေရာလွတ် */
+    overflow: hidden; /* container အပြင်ဘက် ရောက်နေတဲ့ စာလုံးတွေကို ဖျောက်ထားတာ */
+    position: relative;
+    white-space: nowrap;
+}
+
+/* The running text itself */
+.running-text {
+    position: absolute;
+    left: 100%; /* စာသားကို ညာဘက်အစွန်ဆုံးကနေ စတင်တာ */
+    animation: marquee 20s linear infinite; /* marquee လှုပ်ရှားမှုကို သတ်မှတ်တာ */
+}
+
+/* Keyframes for the marquee animation */
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* The color-changing effect for the text */
+.color-change {
+    animation: color-cycle 3s infinite; /* စာလုံးအရောင်ပြောင်းလဲမှု သတ်မှတ်တာ */
+}
+
+/* Keyframes for the color-changing animation */
+@keyframes color-cycle {
+    0%   { color: red; }
+    25%  { color: blue; }
+    50%  { color: green; }
+    75%  { color: orange; }
+    100% { color: red; }
 }
 
 /* FAB Container */
@@ -141,7 +170,7 @@ body {
 .fab-btn-sub {
     width: 50px;
     height: 50px;
-    background-color: #28a745;
+    background-color: #007bff;
     color: #fff;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -153,7 +182,7 @@ body {
 }
 
 .fab-btn-sub:hover {
-    background-color: #218838;
+    background-color: #007bff;
 }
 
 /* Active state for FAB items */
@@ -175,7 +204,7 @@ body {
 
 /* FAB Text */
 .fab-text {
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
     font-size: 14px;
     padding: 5px 10px;
@@ -199,7 +228,7 @@ body {
 
 /* FAB Sub-button Text */
 .fab-text-sub {
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
     font-size: 14px;
     padding: 5px 10px;
@@ -240,23 +269,21 @@ body {
     </a>
     
     <div class="vip-section">
-        <p>
-            တစ်လ VIP (40) ဘတ်ဖြင့်အသုံးပြုနိုင်ပါသည်။
-            <br>
-            အမြဲတန်း ဝန်ဆောင်မှုပေးနေပါသည်။
-            <br>
-            ဝယ်ယူအသုံးပြု့သူ တျောက်ချင်းစီတိုင်းကို 
-            <br>
-            အထူးကျေးဇူးတင်ပါသည်။
-        </p>
-  
+    <div class="running-text-container">
+        <div class="running-text">
+            <span class="color-change">တစ်လ VIP (40) ဘတ်ဖြင့်အသုံးပြုနိုင်ပါသည်။ အမြဲတန်း ဝန်ဆောင်မှုပေးနေပါသည်။ ဝယ်ယူအသုံးပြုသူ တယောက်ချင်းစီတိုင်းကို အထူးကျေးဇူးတင်ပါသည်။</span>
+        </div>
     </div>
+</div>
+
+
+
 </div>
 
 <div class="fab-container">
     <div class="fab-item">
-        <span class="fab-text-sub">Page 1</span>
-        <a href="https://m.me/yourpage1" class="fab-btn-sub">
+        <span class="fab-text-sub">Admin-U Phoe Kaunt</span>
+        <a href="https://m.me/upkvpnfastvpn" class="fab-btn-sub">
             <i class="fa fa-comment"></i>
         </a>
     </div>
