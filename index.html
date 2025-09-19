@@ -1,42 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="my">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UPK FAST VPN PRO</title>
+  <title>UPK FAST VPN PRO - လုံခြုံမြန်ဆန် VPN</title>
   <meta name="author" content="UPK FAST VPN PRO">
-  <meta name="keywords" content="FNET VPN, UPK FAST VPN, Myanmar VPN">
-  <meta name="description" content="Secure and fast VPN for everyone.">
-  <meta name="revised" content="02/11/2023">
+  <meta name="keywords" content="FNET VPN, UPK FAST VPN, Myanmar VPN, Thailand VPN">
+  <meta name="description" content="ထိုင်းရောက်မြန်မာများအတွက် လုံခြုံမြန်ဆန်သော VPN ဝန်ဆောင်မှု။">
+  <meta name="revised" content="18/09/2025">
   
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <style>
+/* =================================
+  CSS Styles for UPK FAST VPN PRO
+  =================================
+*/
+
 /* Main Body and Background */
 body {
-    background: linear-gradient(to bottom, #28a745, #FFFFFF);
+    background: linear-gradient(to bottom, #f4f7f6, #dbe7e4);
     min-height: 100vh;
     background-repeat: no-repeat;
-    font-family: sans-serif;
-    padding-top: 56px; /* Space for the fixed navbar */
+    font-family: 'Padauk', sans-serif;
+    padding-top: 56px;
+    padding-bottom: 20px; 
 }
 
-/* Navbar */
+/* Navbar -- အရောင်အသစ်ပြောင်းထားပါသည် */
 .navbar {
-    background-color: #28a745;
+    background-color: #f4f7f6; /* နောက်ခံအရောင်နှင့် တစ်သားတည်းကျသော အရောင် */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* အရိပ်ကို ပိုပြီးနုအောင်လုပ်ထားပါသည် */
+}
+.navbar-brand {
+    color: #333 !important; /* Navbar စာသားအရောင်ကို အနက်နီးပါးပြောင်းထားပါသည် */
 }
 
 /* Main Content Card */
 .main-card {
     background-color: #FFFFFF;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
     margin: 20px auto;
-    max-width: 350px;
+    max-width: 360px;
     text-align: center;
 }
 
@@ -44,111 +54,91 @@ body {
 .app-logo {
     width: 100px;
     height: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Download Button & Messenger Button - shared styles */
-.download-btn, .messenger-btn {
-    background-color: #28a745;
+/* --- Font Size Adjustments --- */
+.main-card h2 {
+    font-size: 1.6rem; /* မူလအရွယ်အစားထက် အနည်းငယ်လျှော့ထားပါသည် */
+}
+.main-card p {
+    font-size: 0.95rem; /* စာလုံးအရွယ်အစား ချိန်ညှိထားပါသည် */
+    color:#555;
+    margin: 15px 0;
+}
+
+
+/* Download Button */
+.download-btn {
+    background: linear-gradient(45deg, #28a745, #20c997);
     color: #fff;
     border: none;
     border-radius: 30px;
-    padding: 10px 40px;
-    font-size: 16px;
+    padding: 12px 45px;
+    font-size: 1.1rem; /* အရွယ်အစား အနည်းငယ်ညှိထားပါသည် */
+    font-weight: bold;
     margin-top: 20px;
     display: inline-block;
     text-decoration: none;
-}
-/* Animation to make the button pulse/throb */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); } /* Slightly enlarge the button */
-    100% { transform: scale(1); }
-}
-.download-btn {
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+    transition: transform 0.2s ease;
     animation: pulse 1.5s infinite ease-in-out;
 }
-
-
-/* Footer Navigation */
-.nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 65px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-    display: flex;
-    overflow-x: auto;
+.download-btn:hover {
+    transform: scale(1.05);
+    color: #fff;
 }
-.nav__link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    min-width: 50px;
-    font-size: 13px;
-    color: #28a745;
-    text-decoration: none;
-    transition: background-color 0.1s ease-in-out;
-}
-.nav__link--active {
-    color: #6750A4;
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
-/* New CSS for VIP Text Section */
+/* VIP Section */
 .vip-section {
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    text-align: left;
+}
+.vip-section h4 {
+    color: #333; /* ခေါင်းစဉ်အရောင် ညှိထားပါသည် */
+    font-weight: bold;
+    text-align: center;
+}
+.vip-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.vip-section ul li {
+    padding: 5px 0;
+    color: #333;
+    font-size: 0.9rem; /* စာလုံးအရွယ်အစား ညှိထားပါသည် */
+}
+.vip-section ul li .fa-check-circle {
+    color: #28a745;
+    margin-right: 10px;
+}
+.vip-price {
+    font-size: 1.2rem; /* ဈေးနှုန်းစာလုံးအရွယ်အစား ညှိထားပါသည် */
+    font-weight: bold;
+    color: #dc3545;
+    text-align: center;
+    margin-top: 15px; /* Button မရှိတော့သည့်အတွက် အပေါ်နှင့် အနည်းငယ်ခွာထားပါသည် */
 }
 
-/* Container for the running text */
-.running-text-container {
-
-    height: 25px; /* Text အတွက် နေရာလွတ် */
-    overflow: hidden; /* container အပြင်ဘက် ရောက်နေတဲ့ စာလုံးတွေကို ဖျောက်ထားတာ */
-    position: relative;
-    white-space: nowrap;
-}
-
-/* The running text itself */
-.running-text {
-    position: absolute;
-    left: 100%; /* စာသားကို ညာဘက်အစွန်ဆုံးကနေ စတင်တာ */
-    animation: marquee 20s linear infinite; /* marquee လှုပ်ရှားမှုကို သတ်မှတ်တာ */
-}
-
-/* Keyframes for the marquee animation */
-@keyframes marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-}
-
-/* The color-changing effect for the text */
-.color-change {
-    animation: color-cycle 3s infinite; /* စာလုံးအရောင်ပြောင်းလဲမှု သတ်မှတ်တာ */
-}
-
-/* Keyframes for the color-changing animation */
-@keyframes color-cycle {
-    0%   { color: red; }
-    25%  { color: blue; }
-    50%  { color: green; }
-    75%  { color: orange; }
-    100% { color: red; }
-}
-
-/* FAB Container */
+/* FAB (Floating Action Button) */
 .fab-container {
     position: fixed;
-    bottom: 80px;
+    bottom: 25px;
     right: 20px;
     z-index: 1000;
 }
-
-/* Main FAB */
 .fab-btn-main {
     background-color: #007bff;
     color: #fff;
@@ -156,7 +146,6 @@ body {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
@@ -164,201 +153,255 @@ body {
     font-size: 24px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    animation: pulse-fab 1.5s infinite ease-in-out;
 }
-
 .fab-btn-main:hover {
     background-color: #0056b3;
-    animation-play-state: paused;
 }
-
-/* Keyframes for the FAB animation */
-@keyframes pulse-fab {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+.fab-container.active .fab-btn-main {
+    transform: rotate(45deg);
 }
-
-/* FAB Sub-buttons */
 .fab-item {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 5px;
+    right: 5px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Align to the right */
 }
-
+.fab-container.active .fab-item:nth-child(1) {
+    transform: translateY(-70px);
+    opacity: 1;
+    visibility: visible;
+}
+.fab-container.active .fab-item:nth-child(2) {
+    transform: translateY(-130px);
+    opacity: 1;
+    visibility: visible;
+}
 .fab-btn-sub {
     width: 50px;
     height: 50px;
-    background-color: #007bff;
+    background-color: #28a745;
     color: #fff;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
     text-decoration: none;
 }
-
-.fab-btn-sub:hover {
-    background-color: #007bff;
-}
-
-/* Active state for FAB items */
-.fab-container.active .fab-item:nth-child(1) {
-    bottom: 70px;
-    opacity: 1;
-    visibility: visible;
-}
-
-.fab-container.active .fab-item:nth-child(2) {
-    bottom: 130px;
-    opacity: 1;
-    visibility: visible;
-}
-
-.fab-container.active .fab-btn-main {
-    transform: rotate(45deg);
-}
-
-/* FAB Text */
-.fab-text {
-    background-color: #007bff;
-    color: #fff;
-    font-size: 14px;
-    padding: 5px 10px;
-    border-radius: 15px;
-    position: absolute;
-    right: 70px;
-    bottom: 5px;
-    white-space: nowrap;
-    animation: pulse-text 1.5s infinite ease-in-out;
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-}
-
-/* Link for the FAB Text */
-.fab-text-link {
-  text-decoration: none;
-}
-
-/* Keyframes for the text animation */
-@keyframes pulse-text {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-/* FAB Sub-button Text */
 .fab-text-sub {
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     font-size: 14px;
-    padding: 5px 10px;
+    padding: 5px 12px;
     border-radius: 15px;
     margin-right: 10px;
     white-space: nowrap;
 }
+
+/* Usage Guide Section CSS */
+.guide-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    margin: 30px auto;
+    max-width: 360px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.guide-section h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.5rem; /* အရွယ်အစား ညှိထားပါသည် */
+}
+.guide-section ol {
+    list-style: none;
+    padding-left: 0;
+}
+.guide-section ol li {
+    margin-bottom: 25px;
+    padding-left: 45px;
+    position: relative;
+}
+.guide-section .step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.guide-section h5 {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1rem; /* အရွယ်အစား ညှိထားပါသည် */
+}
+.guide-section p {
+    font-size: 0.9rem; /* အရွယ်အစား ညှိထားပါသည် */
+}
+
+.guide-section .screenshot-placeholder {
+    background-color: #e9ecef;
+    border: 2px dashed #ced4da;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    color: #6c757d;
+    margin-top: 15px;
+}
+
 </style>
 </head>
 
 <body>
-<nav class="navbar fixed-top bg-dark" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">UPK FAST VPN PRO</a>
-    <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+
+<header>
+  <nav class="navbar fixed-top"> <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://raw.githubusercontent.com/UPKVPN/upkfackvpnapkdownload/refs/heads/main/UX.png" alt="UPK Logo" width="30" height="30" class="d-inline-block align-text-top rounded-circle">
+        UPK FAST VPN PRO
+      </a>
     </div>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-      </ul>
-    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="main-card">
+      <img src="https://raw.githubusercontent.com/UPKVPN/upkfackvpnapkdownload/refs/heads/main/UX.png" class="app-logo" alt="UPK FAST VPN PRO Application Icon">
+      
+      <h2 style="font-weight:bold;">UPK FAST VPN PRO</h2>
+      <p>
+          ထိုင်းရောက်မြန်မာများအတွက် အင်တာနက်ကို လုံခြုံမြန်ဆန်စွာ အသုံးပြုနိုင်ရန် UPK FAST VPN application ကို ဒေါင်းလုတ်ဆွဲပါ။
+      </p>
+
+      <a href="https://github.com/UPKVPN/upkfackvpnapkdownload/releases/download/v1.0.1/UPK.FAST.VPN.PRO.2.apk" class="download-btn">
+          <i class="fa fa-download"></i> Download APK
+      </a>
+      
+      <div class="vip-section">
+          <h4>✨ VIP ဝန်ဆောင်မှု ✨</h4>
+          <ul>
+              <li><i class="fas fa-check-circle"></i> ပိုမိုမြန်ဆန်သော Server များ</li>
+              <li><i class="fas fa-check-circle"></i> ကြော်ငြာလုံးဝမရှိ</li>
+              <li><i class="fas fa-check-circle"></i> တည်ငြိမ်သော ချိတ်ဆက်မှု</li>
+              <li><i class="fas fa-check-circle"></i> Admin တိုက်ရိုက်ဝန်ဆောင်မှု</li>
+          </ul>
+          <div class="vip-price">လစဉ်ကြေး (၄၀) ဘတ်</div>
+          
+          </div>
   </div>
-</nav>
+</main>
 
-<div class="main-card">
-    <img src="https://raw.githubusercontent.com/UPKVPN/upkfackvpnapkdownload/refs/heads/main/UX.png" class="app-logo" alt="UPK FAST VPN PRO Icon">
+
+<section class="guide-section">
+    <h2><i class="fas fa-directions"></i> Application အသုံးပြုပုံ လမ်းညွှန်</h2>
+    <p class="text-center text-muted mb-4">UPK FAST VPN PRO ကိုဖုန်းထဲထည့်ပြီးသွားပါက အောက်ပါအဆင့်များအတိုင်း လွယ်ကူစွာ စတင်အသုံးပြုနိုင်ပါပြီ။</p>
     
-    <h2>UPK FAST VPN PRO</h2>
-    <p style="color:#555; font-size:14px; margin: 15px 0;">
-        ထိုင်းရောက်မြန်မာများအတွက် အင်တာနက်ကို လုံခြုံမြန်ဆန်စွာ အသုံးပြုနိုင်ရန် UPK FAST VPN application ကို ဒေါင်းလုတ်ဆွဲပါ။
-    </p>
+    <ol>
+        <li>
+            <span class="step-number">၁</span>
+            <h5>App ကိုဖွင့်ပါ</h5>
+            <p>သင်၏ဖုန်း Screen ပေါ်ရှိ UPK FAST VPN PRO icon ကိုနှိပ်၍ app ကိုဖွင့်ပါ။</p>
+            <div class="screenshot-placeholder">
+                <i class="fas fa-image fa-2x"></i>
+                <p class="mt-2"><strong>[ဒီနေရာတွင် App Icon ပုံ သို့မဟုတ် App ၏ ပင်မစာမျက်နှာပုံ ထည့်ရန်]</strong></p>
+            </div>
+        </li>
+        
+        <li>
+            <span class="step-number">၂</span>
+            <h5>Server ရွေးချယ်ပါ</h5>
+            <p>App အတွင်းရောက်ပါက ဆာဗာရွေးရန်နေရာ (ဥပမာ - 'Select Server') ကိုနှိပ်ပြီး သင်အသုံးပြုလိုသောနိုင်ငံ (Singapore, Thailand) ကိုရွေးချယ်ပါ။ <br><small class="text-muted">(သိမှတ်ရန်- Singapore server သည် အာရှတွင်း အမြန်ဆုံးဖြစ်လေ့ရှိသည်။)</small></p>
+            <div class="screenshot-placeholder">
+                <i class="fas fa-server fa-2x"></i>
+                <p class="mt-2"><strong>[ဒီနေရာတွင် Server List ပြထားသည့်ပုံ ထည့်ရန်]</strong></p>
+            </div>
+        </li>
 
-    <a href="https://github.com/UPKVPN/upkfackvpnapkdownload/releases/download/v1.0.1/UPK.FAST.VPN.PRO.2.apk" class="download-btn">
-        <i class="fa fa-arrow-down"></i> Download
-    </a>
-    
-    <div class="vip-section">
-    <div class="running-text-container">
-        <div class="running-text">
-            <span class="color-change">တစ်လ VIP (40) ဘတ်ဖြင့်အသုံးပြုနိုင်ပါသည်။ အမြဲတန်း ဝန်ဆောင်မှုပေးနေပါသည်။ ဝယ်ယူအသုံးပြုသူ တယောက်ချင်းစီတိုင်းကို အထူးကျေးဇူးတင်ပါသည်။</span>
-        </div>
-    </div>
-</div>
+        <li>
+            <span class="step-number">၃</span>
+            <h5>ချိတ်ဆက်ပါ (Connect)</h5>
+            <p>ဆာဗာရွေးပြီးပါက Connect Button (အလယ်ရှိ အဖွင့်/အပိတ် ခလုတ်ကြီး) ကိုနှိပ်ပါ။ ပထမဆုံးအကြိမ်ဖြစ်ပါက သင့်ဖုန်းမှ Connection Request တောင်းလျှင် 'OK' နှိပ်ပေးပါ။</p>
+            <div class="screenshot-placeholder">
+                <i class="fas fa-power-off fa-2x"></i>
+                 <p class="mt-2"><strong>[ဒီနေရာတွင် Connect Button နှိပ်ရမည့်ပုံ ထည့်ရန်]</strong></p>
+            </div>
+        </li>
+
+        <li>
+            <span class="step-number">၄</span>
+            <h5>ချိတ်ဆက်မှု အခြေအနေစစ်ဆေးပါ</h5>
+            <p>Connect ဖြစ်သွားပါက ခလုတ်သည် 'Connected' ဟုပြပြီး အရောင်ပြောင်းသွားပါမည်။ ဖုန်း၏အပေါ်ဘက် Status Bar တွင် သော့ခလောက်ပုံစံ (VPN icon 鑰) ပေါ်လာပါမည်။</p>
+            <div class="screenshot-placeholder">
+                <i class="fas fa-check-circle fa-2x"></i>
+                 <p class="mt-2"><strong>[ဒီနေရာတွင် Connected ဖြစ်နေသည့်ပုံ ထည့်ရန်]</strong></p>
+            </div>
+        </li>
+
+        <li>
+            <span class="step-number">၅</span>
+            <h5>အဆက်ဖြတ်တောက်ရန် (Disconnect)</h5>
+            <p>အသုံးမပြုတော့ပါက App ကိုပြန်ဖွင့်ပြီး 'Disconnect' ဟုပြနေသော ခလုတ်ကို ပြန်နှိပ်လိုက်ရုံပါပဲ။</p>
+            <div class="screenshot-placeholder">
+                <i class="fas fa-plug fa-2x"></i>
+                 <p class="mt-2"><strong>[ဒီနေရာတွင် Disconnect လုပ်ရမည့်ပုံ ထည့်ရန်]</strong></p>
+            </div>
+        </li>
+    </ol>
+</section>
 
 
-
-</div>
-
-<div class="fab-container">
+<div class="fab-container" id="fab-container">
     <div class="fab-item">
-        <span class="fab-text-sub">Admin-U Phoe Kaunt</span>
-        <a href="https://m.me/upkvpnfastvpn" class="fab-btn-sub">
-            <i class="fa fa-comment"></i>
-        </a>
-    </div>
-    <div class="fab-item">
-        <span class="fab-text-sub">Admin-facebook page သို့</span>
+        <span class="fab-text-sub">Facebook Page</span>
         <a href="https://www.facebook.com/share/15xGoQ2WBN/" class="fab-btn-sub">
-            <i class="fa fa-comment"></i>
+            <i class="fab fa-facebook-f"></i>
         </a>
     </div>
-    <div class="fab-main">
-        <a href="https://m.me/upkvpnfastvpn" class="fab-text-link">
-          <p class="fab-text">VIP ဝယ်ယူရန်</p>
+    <div class="fab-item">
+        <span class="fab-text-sub">Admin (U Phoe Kaunt)</span>
+        <a href="https://m.me/upkvpnfastvpn" class="fab-btn-sub">
+            <i class="fab fa-facebook-messenger"></i>
         </a>
-        <button id="fab-toggle" class="fab-btn-main">
-            <i class="fa fa-comment"></i>
-        </button>
     </div>
+    <button id="fab-toggle" class="fab-btn-main">
+        <i class="fas fa-comment-dots"></i>
+    </button>
 </div>
 
-<nav class="nav">
-  <a href="index.html" class="nav__link nav__link--active">
-    <i class="material-icons nav__icon">home</i>
-    <span class="nav__text">Home</span>
-  </a>
-  <a href="image.html" class="nav__link">
-    <i class="material-icons nav__icon">image</i>
-    <span class="nav__text">Image</span>
-  </a>
-  <a href="install.html" class="nav__link">
-    <i class="material-icons nav__icon">android</i>
-    <span class="nav__text">Install Apk</span>
-  </a>
-  <a href="notification.html" class="nav__link">
-    <i class="material-icons nav__icon">notifications</i>
-    <span class="nav__text">Notification</span>
-  </a>
-</nav>
 
 <script>
+/* =================================
+  JavaScript for UPK FAST VPN PRO
+  =================================
+*/
+document.addEventListener('DOMContentLoaded', function() {
     const fabToggle = document.getElementById('fab-toggle');
-    const fabContainer = document.querySelector('.fab-container');
+    const fabContainer = document.getElementById('fab-container');
+    const fabIcon = fabToggle.querySelector('i');
 
     fabToggle.addEventListener('click', function() {
         fabContainer.classList.toggle('active');
+        if (fabContainer.classList.contains('active')) {
+            fabIcon.classList.remove('fa-comment-dots');
+            fabIcon.classList.add('fa-times');
+        } else {
+            fabIcon.classList.remove('fa-times');
+            fabIcon.classList.add('fa-comment-dots');
+        }
     });
+});
 </script>
 
 </body>
